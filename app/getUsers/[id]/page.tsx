@@ -1,6 +1,6 @@
 import React from "react";
 import { getApiDetails } from "@/utils/constant";
-import DeleteButton from "./deleteButton";
+import DeleteButton from "@/components/DeleteButton";
 import Link from "next/link";
 async function getSingleUser(id: number) {
   const { method, url } = getApiDetails("getSingleUser");
@@ -33,13 +33,13 @@ export default async function Page({
           <p className="mb-2 text-gray-700">
             <span className="font-semibold">Password:</span> {user.password}
           </p>
-          <div className="flex gap-4 mt-4">
+          <div className="flex justify-between items-center">
             <Link href={`/updateUsers/${user.id}`}>
-              <button className="bg-blue-400 text-white px-4 py-3">
+              <button className="bg-blue-400 text-white rounded-sm  px-6 py-2  justify-between items-center">
                 update details
               </button>
             </Link>
-            <DeleteButton id={user.id}></DeleteButton>
+            <DeleteButton apiKey="deleteUsers" id={user.id}></DeleteButton>
           </div>
         </div>
       </div>

@@ -35,6 +35,10 @@ const endpoints = {
     method: "POST",
     url: "/auth/login/",
   },
+  carts: {
+    method: "GET",
+    url: "/carts",
+  },
 };
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;

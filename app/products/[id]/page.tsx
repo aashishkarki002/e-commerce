@@ -2,7 +2,7 @@ import React from "react";
 import { getApiDetails } from "@/utils/constant";
 import Image from "next/image";
 import Link from "next/link";
-import DeleteButton from "./deleteButton";
+import DeleteButton from "@/components/DeleteButton";
 async function getSingleProduct(id: number) {
   const { method, url } = getApiDetails("getSingleProduct");
   const res = await fetch(`${url}${id}`, { method });
@@ -44,7 +44,7 @@ export default async function Page({
                 Edit a product
               </button>
             </Link>
-            <DeleteButton id={product.id}></DeleteButton>
+            <DeleteButton apiKey="deleteProduct" id={product.id}></DeleteButton>
           </div>
         </div>
       </div>

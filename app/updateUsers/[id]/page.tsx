@@ -34,6 +34,7 @@ export default function Page() {
 
     if (!password.trim()) {
       newErrors.password = "Password is required";
+
       isValid = false;
     }
 
