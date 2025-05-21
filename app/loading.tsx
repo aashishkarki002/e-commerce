@@ -1,5 +1,5 @@
-import React from 'react';
-import Loader from '@/components/loader';
+import React from "react";
+import Loader from "@/components/loader";
 
 export default function Loading() {
   return (
@@ -7,4 +7,4 @@ export default function Loading() {
       <Loader />
     </div>
   );
-} 
+}

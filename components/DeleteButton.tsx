@@ -1,0 +1,27 @@
+"use client";
+import { getApiDetails } from "@/utils/constant";
+import React from "react";
+
+export default function DeleteButton({ id, type }) {
+  async function Delete() {
+    const { method, url } = getApiDetails(
+      type == "product" ? "deleteProduct" : "deleteUsers"
+    );
+    const res = await fetch(`${url}${id}`, {
+      method,
+    });
+    if (res.ok) {
+      alert(`${type} deleted succesfully`);
+    }
+  }
+  return (
+    <div>
+      <button
+        className="bg-red-600 text-white rounded-sm mt-4 px-6 py-2"
+        onClick={Delete}
+      >
+        delete
+      </button>
+    </div>
+  );
+}

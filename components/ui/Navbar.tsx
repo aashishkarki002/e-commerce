@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { User } from "lucide-react";
+import { User, ShoppingCart } from "lucide-react";
 export default function Navbar() {
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
@@ -11,9 +11,14 @@ export default function Navbar() {
         <li className="hover:text-blue-600 cursor-pointer">Services</li>
         <li className="hover:text-blue-600 cursor-pointer">Contact</li>
       </ul>
-      <Link href={"/users"}>
-        <User></User>
-      </Link>
+      <div className="flex justify-between items-center gap-4">
+        <Link href={"/users "}>
+          <User></User>
+        </Link>
+        <Link href={"/carts"}>
+          <ShoppingCart></ShoppingCart>
+        </Link>
+      </div>
     </nav>
   );
 }
