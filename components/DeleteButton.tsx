@@ -2,16 +2,14 @@
 import { getApiDetails } from "@/utils/constant";
 import React from "react";
 
-export default function DeleteButton({ id, type }) {
+export default function DeleteButton({ id, apiKey }) {
   async function Delete() {
-    const { method, url } = getApiDetails(
-      type == "product" ? "deleteProduct" : "deleteUsers"
-    );
+    const { method, url } = getApiDetails(apiKey);
     const res = await fetch(`${url}${id}`, {
       method,
     });
     if (res.ok) {
-      alert(`${type} deleted succesfully`);
+      alert(`${apiKey} deleted succesfully`);
     }
   }
   return (

@@ -39,7 +39,7 @@ export default async function Page({
                 update details
               </button>
             </Link>
-            <DeleteButton type="user" id={user.id}></DeleteButton>
+            <DeleteButton apiKey="deleteUsers" id={user.id}></DeleteButton>
           </div>
         </div>
       </div>

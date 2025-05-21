@@ -12,11 +12,11 @@ export default function Navbar() {
         <li className="hover:text-blue-600 cursor-pointer">Contact</li>
       </ul>
       <div className="flex justify-between items-center gap-4">
-        <Link href={"/users "}>
-          <User></User>
+        <Link href="/users ">
+          <User />
         </Link>
-        <Link href={"/carts"}>
-          <ShoppingCart></ShoppingCart>
+        <Link href="/carts">
+          <ShoppingCart />
         </Link>
       </div>
     </nav>

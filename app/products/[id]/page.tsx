@@ -44,7 +44,7 @@ export default async function Page({
                 Edit a product
               </button>
             </Link>
-            <DeleteButton type="product" id={product.id}></DeleteButton>
+            <DeleteButton apiKey="deleteProduct" id={product.id}></DeleteButton>
           </div>
         </div>
       </div>

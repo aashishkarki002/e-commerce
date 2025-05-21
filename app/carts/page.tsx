@@ -7,7 +7,7 @@ async function getCarts() {
     method,
   });
   const data = await res.json();
-  console.log(data);
+
   return data;
 }
 
@@ -25,8 +25,8 @@ export default async function Page() {
             <p>Date: {new Date(cart.date).toLocaleDateString()}</p>
             <h3 className="mt-2 font-medium">Products:</h3>
             <ul className="list-disc list-inside ml-4">
-              {cart.products.map((product, index) => (
-                <li key={index}>
+              {cart.products.map((product) => (
+                <li key={product.productId}>
                   Product ID: {product.productId}, Quantity: {product.quantity}
                 </li>
               ))}
